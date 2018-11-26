@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: testInput
+          group: redis
+        output:
+          destination: testOutput
+      default:
+        content-type: application/*+avro
+        group: redis
+        required-groups: redis
+      schema:
+        avro:
+          schema-locations:
+            - classpath:avro/generated/Demo.avsc
+      schema-registry-client:
+        endpoint: http://localhost:64844
+
+server:
+  port: 0

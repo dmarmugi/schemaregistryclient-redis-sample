@@ -1,0 +1,9 @@
+{
+  "type" : "record",
+  "name" : "Demo",
+  "namespace" : "com.demo",
+  "fields" : [ {
+    "name" : "message",
+    "type" : [ "null", "string" ]
+  } ]
+}
