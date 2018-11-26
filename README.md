@@ -1,0 +1,1 @@
+# schemaregistryclient-redis-sample
