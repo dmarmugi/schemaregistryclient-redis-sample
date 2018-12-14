@@ -1,4 +1,8 @@
 spring:
+  cache:
+    cache-names: linear
+    caffeine:
+      spec: expireAfterWrite=10m
   cloud:
     stream:
       bindings:
@@ -16,7 +20,7 @@ spring:
           schema-locations:
             - classpath:avro/generated/Demo.avsc
       schema-registry-client:
-        endpoint: http://localhost:64844
+        endpoint: http://localhost:54846
 
 server:
   port: 0
