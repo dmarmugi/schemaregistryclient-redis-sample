@@ -1,6 +1,7 @@
 spring:
   cache:
-    cache-names: demo,org.springframework.cloud.stream.schema.reflectionCache,org.springframework.cloud.stream.schema.referenceCache
+#    cache-names: demo,org.springframework.cloud.stream.schema.reflectionCache,org.springframework.cloud.stream.schema.referenceCache
+    cache-names: demo
     caffeine:
       spec: expireAfterWrite=10m
   cloud:
@@ -20,7 +21,7 @@ spring:
           schema-locations:
             - classpath:avro/generated/Demo.avsc
       schema-registry-client:
-        endpoint: http://localhost:51546
+        endpoint: http://localhost:8990
 
 server:
   port: 0
